@@ -43,7 +43,7 @@ section{
 .header{
     width: 100%;
     border-bottom: var(--border);
-    background-color: var(--white);
+    background-color: var(--primary-color);
     z-index: 99;
     position: sticky;
     top: 0;
@@ -56,11 +56,18 @@ section{
     padding: 15px 2rem;
 }
 
+.header h1{
+    font-family: 'coca';
+    font-weight: normal;
+    font-size: 3rem;
+    color: #fff;
+}
+
 .header section .logo {
     width: 100px;
     height: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -86,7 +93,7 @@ section{
 
 .header section .navbar a{
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: var(--white);
     
 }
 
@@ -95,8 +102,8 @@ section{
 }
 
 .header section .navbar ul li:hover a{
-    color: var(--text-color);
-    border-bottom: 3px solid var(--primary-color);
+    color: #fff;
+    border-bottom: 3px solid var(--text-color);
     padding-bottom: 0.5rem; 
 }
 
@@ -108,10 +115,11 @@ section{
 .header section .icons i{
     margin: 1rem;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: var(--white);
 }
 
-.header section img:hover{
+.header section i:hover{
     transform: scale(1.07);
 }
 
@@ -140,6 +148,7 @@ section{
     display: flex;
     width: 100%;
     align-items: center;
+    padding: 0 15px;
 }
 
 .home-container .container-coca{
@@ -182,8 +191,14 @@ section{
 .icons-social-midia i{
     color: #fff;
     font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
+.icons-social-midia i:hover{
+    transform: scale(1.2);
+}
+/* SECTION */
 .about .row{
     display: flex;
     flex-wrap: wrap;
