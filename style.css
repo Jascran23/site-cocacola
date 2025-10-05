@@ -244,7 +244,6 @@ section{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    background-color: gray;
 }
 
 .products .grid-container .card{
