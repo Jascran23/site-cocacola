@@ -9,6 +9,7 @@
     --text-color: #000;
     --text-color1: #333333;
     --text-color2: #222222;
+    --gray-100: #F5F5F5;
     font-size: 10px;
 }
 
@@ -63,16 +64,12 @@ section{
     color: #fff;
 }
 
-.header section .logo {
-    width: 100px;
-    height: 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 .header section .logo img{
     width: 100%;
+}
+
+.header section .icon-menu-list i{
+    color: #fff;
 }
 
 .header section .icon-menu-list{
@@ -140,7 +137,7 @@ section{
 }
 
 .home-container{
-    background-image: url("./img/hero-banner3.png");
+    background-image:url(./img/background-texture.jpg);
     background-position: center;
     background-size:cover;   
     max-height: 700px; 
@@ -149,6 +146,28 @@ section{
     width: 100%;
     align-items: center;
     padding: 0 15px;
+    position: relative;
+}
+
+.home-container::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-left: -15px;
+    background-color: #E41C2A;
+    opacity: 0.5;
+}
+
+.texture{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url("./img/line-hero-background.svg");
+    position: absolute;
+    margin-left: -15px;
+    background-position: center;
+    background-size:cover;
 }
 
 .home-container .container-coca{
@@ -186,6 +205,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    z-index: 1;
 }
 
 .icons-social-midia i{
@@ -193,11 +213,56 @@ section{
     font-size: 1.5rem;
     cursor: pointer;
     transition: 0.1s;
+    transform:  translateY(150px);
 }
 
 .icons-social-midia i:hover{
     transform: scale(1.2);
 }
+/* SECTION */
+
+.products{
+    width: 100%;
+}
+
+.products h2{
+    margin-top: 15px;
+}
+
+.products .grid-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.products .grid-container .grid, .products .grid-container .grid2{
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: gray;
+}
+
+.products .grid-container .card{
+    background: red;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.products .grid-container .card-flex{
+    background: blue;
+    min-width: 100%;
+    min-height: 200px;
+    border-radius: 10px;
+}
+
+
 /* SECTION */
 .about .row{
     display: flex;
