@@ -8,7 +8,7 @@ btnIconMobile.addEventListener(('click'), ()=> {
         
     navLinks.forEach((link, index) => {  
         link.style.animation = `effectTranslate 0.5s ease-in forwards ${
-        index / 7 + 0.1
+        index / 18 + 0.05
         }s`;
     });
 
@@ -30,7 +30,7 @@ function esconderMenu() {
 }
 
 function verificarJanela(){
-    const larguraMinima = 585;
+    const larguraMinima = 768;
 
     if (window.innerWidth >= larguraMinima){
         esconderMenu();
@@ -38,3 +38,21 @@ function verificarJanela(){
 }
 
 window.addEventListener('resize', verificarJanela);
+
+// ANIMAÇÃO DO CARROSSEL
+let count = 1;
+document.getElementById("radio1").checked = true;
+
+setInterval(function(){
+    nextImage();
+}, 6000);
+
+function nextImage(){
+    count++;
+    if(count>4){
+        count = 1;
+    }
+
+    document.getElementById("radio"+count).checked = true;
+}
+//FIM DA ANIMAÇÃO DO CARROSSEL ========
