@@ -77,7 +77,7 @@ function nextImage(){
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
     },
     { // FRUTAS VERMELHAS
-        img: "./img/pecoke.png",  //Imagem do Produto
+        img: "./img/petcoke.png",  //Imagem do Produto
         nome: "Coca cola",    //Nome do Produto
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
     },
