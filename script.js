@@ -61,32 +61,32 @@ function nextImage(){
     // INSERIR IMAGENS DOS PRODUTOS
 
     const CatalogProducts = [
-    { // MORANGO
+    {
         img: "./img/bottle.png",  //Imagem do Produto
         nome: "Coca cola",    //Nome do Produto
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
     },
-    { // ABACAXI
+    {
         img: "./img/bottle-clean.png",  //Imagem do Produto
         nome: "Coca cola",    //Nome do Produto
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
     },
-    { // CAJÁ
+    {
         img: "./img/cokeoriginal.png",  //Imagem do Produto
         nome: "Coca cola",    //Nome do Produto
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
     },
-    { // FRUTAS VERMELHAS
+    {
         img: "./img/petcoke.png",  //Imagem do Produto
         nome: "Coca cola",    //Nome do Produto
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
     },
-    { // KIWI
+    {
         img: "./img/zerocoke.png",  //Imagem do Produto
         nome: "Coca cola",    //Nome do Produto
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
     },
-    { // MARACUJÁ
+    {
         img: "./img/3dcoke.png",  //Imagem do Produto
         nome: "Coca cola",    //Nome do Produto
         descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
@@ -159,3 +159,20 @@ prev.addEventListener("click", function () {
 });
 // FIM ANIMAÇÃO DO SLIDER DE PRODUTOS
 // =============== INSERIR CATALOGO DE PRODUTOS =================
+
+
+const btnValue1 = document.querySelector('.option1');
+const btnValue2 = document.querySelector('.option2');
+const btnValue3 = document.querySelector('.option3');
+
+// const options = document.querySelectorAll('.container.options')
+
+btnValue1.addEventListener(('click'), () => {
+      btnCategories.forEach(element => {
+        element.classList.remove("active"); 
+      })
+
+      btnCategory1.classList.add("active");
+    
+    
+    });
