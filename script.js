@@ -115,13 +115,13 @@ function nextImage(){
             }
 
             const templateProdutos = `
-                <div class="content">
+                <div class="content reveal">
                     <div class="name">${produto.nome}</div>
                     <div class="des">${produto.descricao}</div>
                     <button>See More</button>
                 </div>
 
-                <div class="container-image" style="background-image: url(${produto.img});">
+                <div class="container-image reveal" style="background-image: url(${produto.img});">
                 
                 </div>            
             `;
@@ -165,14 +165,75 @@ const btnValue1 = document.querySelector('.option1');
 const btnValue2 = document.querySelector('.option2');
 const btnValue3 = document.querySelector('.option3');
 
-// const options = document.querySelectorAll('.container.options')
+const btnOptions = document.querySelectorAll('.container-options .options');
+const contentValues = document.querySelectorAll('.container-values');
+
+console.log(contentValues)
+
+const contentMission = document.querySelector('.content-mission');
+const contentVision = document.querySelector('.content-vision');
+const contentValue = document.querySelector('.content-value');
 
 btnValue1.addEventListener(('click'), () => {
-      btnCategories.forEach(element => {
+      btnOptions.forEach(element => {
         element.classList.remove("active"); 
       })
+      btnValue1.classList.add("active");
 
-      btnCategory1.classList.add("active");
-    
-    
+      contentValues.forEach(element => {
+        console.log(element.textContent)
+        element.classList.remove("show");
+      });
+      contentMission.classList.add('show');
+
+});
+btnValue2.addEventListener(('click'), () => {
+      btnOptions.forEach(element => {
+        element.classList.remove("active"); 
+      })
+      btnValue2.classList.add("active");
+      
+      contentValues.forEach(element => {
+        element.classList.remove("show");
+      });
+      contentVision.classList.add('show');
+});
+btnValue3.addEventListener(('click'), () => {
+      btnOptions.forEach(element => {
+        element.classList.remove("active"); 
+      })
+      btnValue3.classList.add("active");
+      
+      contentValues.forEach(element => {
+        element.classList.remove("show");
+      });
+      contentValue.classList.add('show');
+});
+
+
+// ANIMAÇÃ DE ROLAGEM 
+
+function observed(){
+  let section = document.querySelectorAll(".reveal");
+
+  let observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("show");
+      }
+
     });
+  },
+  {
+    threshold: 0.5,
+  }
+  );
+
+  section.forEach((div) => observer.observe(div));
+}
+
+observed();

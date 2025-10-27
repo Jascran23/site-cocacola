@@ -35,10 +35,16 @@ html, body{
     position: relative;
 }
 
-/* section{
-    width: 100%;
-    margin: 0 auto;
-} */
+.reveal {
+  opacity: 0;
+  transition: all 0.6s ease;
+  transform: translateX(-150px);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .background-section{
     background-color: var(--gray-100);
@@ -457,31 +463,39 @@ button{
     max-width: 350px;
 }
 
-.values .col1 .content{
+.values .col1 .content-values{
     max-width: 350px;
     gap: 15px;
     display: flex;
     flex-direction: column;
 }
 
-.values .col1 .content img{
+.values .col1 .content-values .container-values{
+    display: none;
+}
+
+.values .col1 .content-values .container-values.show{
+    display: block;
+}
+
+.values .col1 .content-values img{
     max-width: 70px;
     margin-top: 20px;
 }
 
-.values .col1 .content h1{
+.values .col1 .content-values h1{
     max-width: 300px;
     font-size: 25px;
     font-weight: normal;
     margin-top: 20px;
 }
 
-.values .col1 .content h2{
+.values .col1 .content-values h2{
     max-width: 100%;
     font-size: 25px;
 }
 
-.values .col1 .content p{
+.values .col1 .content-values p{
     font-size: 14px;
 }
 
@@ -656,7 +670,6 @@ button{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: rotate(20deg);
     max-width: 70%;
     max-height: 350px;
 }
@@ -722,27 +735,27 @@ button{
     height: 100%;
     box-shadow: none;
 }
-.catalog .container .catalog-slide .item:nth-child(2):hover, .catalog .container .catalog-slide .item:nth-child(3):hover, .catalog .container .catalog-slide .item:nth-child(4):hover{
-    transform: translate(-100px, -20px);
-}
+
 .catalog .catalog-slide .item:nth-child(2){
     right: 20%;
     bottom: 5px;
     display: flex; 
     position: absolute;
-    
+    filter: drop-shadow(2px 4px 6px black);
 }
 .catalog .catalog-slide .item:nth-child(3){
     right: calc(20% - 90px);
     bottom: 5px;
     display: flex;
-    position: absolute; 
+    position: absolute;
+    filter: drop-shadow(2px 4px 6px black); 
 }
 .catalog .catalog-slide .item:nth-child(4){
     right: calc(20% - 180px);
     bottom: 5px;
     display: flex;
     position: absolute; 
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 /* here n = 0, 1, 2, 3,... */
@@ -789,7 +802,7 @@ button{
     min-height: 700px;
     display: flex;
     justify-content: center;
-    padding: 30px 0;
+    padding: 30px 8px;
     align-items: center;
 }
 
@@ -807,7 +820,7 @@ button{
     align-items: center;
     min-height: 350px;
     width: 50%;
-    min-width: 450px;
+    min-width: 380px;
 }
 
 .address .row .col1 .box {
@@ -817,6 +830,7 @@ button{
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    align-items: center;
 }
 
 .address .row .col1 .box .container{
@@ -869,10 +883,14 @@ button{
 .address .row .col2 .container-map{
     width: 400px;
     height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .address .row .col2 .container-map iframe{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 400px;
     border-radius: 20px;
     box-shadow: 1px 1px 3px var(--text-color1);
