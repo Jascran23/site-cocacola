@@ -475,7 +475,7 @@ button{
     display: none;
 }
 
-.values .col1 .content-values .container-values.show{
+.values .col1 .content-values .container-values.active{
     display: block;
 }
 

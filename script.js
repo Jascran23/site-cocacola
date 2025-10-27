@@ -182,9 +182,9 @@ btnValue1.addEventListener(('click'), () => {
 
       contentValues.forEach(element => {
         console.log(element.textContent)
-        element.classList.remove("show");
+        element.classList.remove("active");
       });
-      contentMission.classList.add('show');
+      contentMission.classList.add('active');
 
 });
 btnValue2.addEventListener(('click'), () => {
@@ -194,9 +194,9 @@ btnValue2.addEventListener(('click'), () => {
       btnValue2.classList.add("active");
       
       contentValues.forEach(element => {
-        element.classList.remove("show");
+        element.classList.remove("active");
       });
-      contentVision.classList.add('show');
+      contentVision.classList.add('active');
 });
 btnValue3.addEventListener(('click'), () => {
       btnOptions.forEach(element => {
@@ -205,9 +205,9 @@ btnValue3.addEventListener(('click'), () => {
       btnValue3.classList.add("active");
       
       contentValues.forEach(element => {
-        element.classList.remove("show");
+        element.classList.remove("active");
       });
-      contentValue.classList.add('show');
+      contentValue.classList.add('active');
 });
 
 
