@@ -1043,18 +1043,15 @@ footer .copyright a{
         padding: 15px 2px;
     }
 
-    .campaign .col1{
-    width: 100%;
-    min-width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    }
 
     .campaign .col1 .content h1{
         font-size: 4rem;
         min-width: 300px;
+    }
+
+    .address .row .col1{
+        width: 80%;
+        min-width: 200px;
     }
 
 }
@@ -1073,8 +1070,35 @@ footer .copyright a{
         
     }
 
+    .campaign .col1 .content h1 {
+        font-size: 3.3rem !important;
+        min-width: 200px !important;
+    }
+    
+    .campaign .col1{
+    width: 100%;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
     .catalog .catalog-slide .item:nth-child(1) .content {
         color: black;
+    }
+
+    .campaign .col2 .container-grid{
+        width: 100%;
+        max-width: 450px;
+        height: 500px;
+        position: relative;
+        flex: 1;
+    }
+
+    .campaign .col2 .container-grid .container-image:nth-child(1){
+        left: 10px;
+        top: 120px;
     }
 
 }
