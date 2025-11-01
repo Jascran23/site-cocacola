@@ -38,7 +38,7 @@ html, body{
 .reveal {
   opacity: 0;
   transition: all 0.6s ease;
-  transform: translateX(-150px);
+  transform: translateX(-100px);
 }
 
 .reveal.show {
@@ -54,6 +54,7 @@ button{
     cursor: pointer;
 }
 
+/* #region Header */
 .header{
     width: 100%;
     background-color: var(--primary-color);
@@ -116,7 +117,9 @@ button{
     padding-bottom: 0.5rem; 
 }
 
-/* ======= SECTION HOME =========== */
+/* #endregion */
+
+/* #region SECTION HOME =========== */
 /* SECTION BANNER HERO */
 
 .home-container{
@@ -279,9 +282,9 @@ button{
     display: flex;
     cursor: pointer;
 }
-/* SECTION BANNER HERO  -------------*/
+/* #endregion */
 
-/* ============ SECTION CAMPAIGN ==============*/
+/*#region SECTION CAMPAIGN ==============*/
 .campaign{
     width: 100%;
     min-height: 700px;
@@ -289,7 +292,7 @@ button{
     flex-wrap: wrap;
     position: relative;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color: var(--gray-100);
     overflow: hidden;
     padding: 30px 20px;
@@ -363,8 +366,8 @@ button{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 450px;
-    max-width: 650px;
+    width: 100%;
+    max-width: 450px;
 }
 
 .campaign .col2 .container-grid{
@@ -407,8 +410,9 @@ button{
     bottom: 20px;
 }
 
-/* ============ SECTION CAMPAIGN ==============*/
+/* #endregion */
 
+/* #region values */
 .values{
     width: 100%;
     display: flex;
@@ -512,10 +516,10 @@ button{
 }
 
 
-/* ============ FIM SECTION VALUES ========= */
+/* #endregion */
 
 
-/* ============ SECTION CATALOGO ============== */
+/* #region SECTION CATALOGO ============== */
 .catalog{
     width: 100%;
     height: auto;
@@ -793,9 +797,9 @@ button{
     opacity: 0.8;
 }
 
-/* ============ FIM SECTION CATALOGO ============== */
+/* #endregion */
 
-/* =============== SECTION ADDRESS =============== */
+/* #region SECTION ADDRESS =============== */
 
 .address{
     width: 100%;
@@ -898,9 +902,9 @@ button{
 }
 
 
-/* ======== FIM SECTION ADRESS ======== */
+/* #endregion */
 
-
+/* #region footer */
 footer .row{
     display: flex;
     width: 100%;
@@ -982,9 +986,9 @@ footer .copyright a{
     font-weight: 800;
 }
 
-/* ---------- FIM FOOTER -------- */
+/* #endregion */
 
-/* -------- ANIMAÇÕES ----------*/
+/* #region  ANIMAÇÕES ----------*/
 @keyframes effectFade{
     from{
         opacity: 0;
@@ -1030,9 +1034,10 @@ footer .copyright a{
 }
 
 
-/* -------- FIM ANIMAÇÕES ----------*/
+/* #endregion */
 
-/* ---------- RESPONSIVIDADE --------------- */
+
+/* #region RESPONSIVIDADE --------------- */
 
 /* mobile */
 @media screen and (max-width: 480px){
@@ -1053,6 +1058,38 @@ footer .copyright a{
         width: 80%;
         min-width: 200px;
     }
+    
+    .campaign .col2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .campaign .col2 .container-grid .container-image:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        left: 0;
+    }
+
+     .campaign .col2 .container-grid .container-image:nth-child(2) {
+        width: 160px;
+        height: 160px;
+        right: 5%;
+    }
+     .campaign .col2 .container-grid .container-image:nth-child(3){
+    right: 7%;
+    bottom: 10%;
+     }
+    .campaign .col2 .container-grid{
+        width: 100%;
+        height: 500px;
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 }
 
@@ -1101,6 +1138,14 @@ footer .copyright a{
         top: 120px;
     }
 
+     .campaign .col2 .container-grid{
+        width: 100%;
+        max-width: 450px;
+        height: 500px;
+        position: relative;
+        flex: 1;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -1147,17 +1192,19 @@ footer .copyright a{
     }
 
     /* SECTION CAMPAIGN */
-   
+    
+    .campaign .col1 {
+        width: 100%;
+        min-width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 
     .campaign .col1 .content h1{
         font-size: 4rem;
         min-width: 300px;
-    }
-
-    .campaign .col2 .container-grid .container-image:nth-child(1){
-
-        width: 220px;
-        height: 220px; 
     }
 
     .campaign .col2 .container-grid .container-image {
@@ -1165,14 +1212,13 @@ footer .copyright a{
     height: 165px;
     }
 
-    
     .campaign .col2 .container-grid .container-image:nth-child(2){
         right: 5%;
     }
 
     .campaign .col2 .container-grid .container-image:nth-child(3){
     right: 7%;
-    bottom: 20%;
+    bottom: 5%;
 }
 
 
@@ -1192,3 +1238,5 @@ footer .copyright a{
 @media screen and (min-width: 1440px) {
   
 }
+
+/* #endregion */
